@@ -1,0 +1,159 @@
+.panel {
+  position: relative;
+  box-sizing: border-box;
+
+  @media (min-width: $pointLargeDesktop) {
+    @include flex-container();
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    @include flex-container();
+    margin-bottom: 1.5vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: block;
+    margin-bottom: 2.9vw;
+  }
+
+  &.panel_error {
+    border: 1px solid #e74c3c;
+    @media (min-width: $pointLargeDesktop) {
+      border-radius: 25px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      border-radius: 2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      border-radius: 6vw;
+    }
+
+    .form-group__label {
+      color: #e74c3c;
+    }
+  }
+
+  &.panel_disabled {
+    &:after {
+      content:  " ";
+      display: block;
+      position: absolute;
+      background: transparent;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .form-group__label {
+      color: rgba(0,0,0,0.2);
+    }
+
+    .slider__input-place {
+      color: rgba(0,0,0,0.2);
+    }
+
+    .slider__explanation {
+      color: rgba(0,0,0,0.2);
+    }
+
+    .slider__content-place {
+      opacity: 0.2;
+    }
+
+    .label {
+      border-color: rgba(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.panel__as-announcement-item {
+    .panel__data {
+      @media (min-width: $pointLargeDesktop) {
+        @include flex-container();
+        padding: 20px 31px 21px 31px !important;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        padding: 1.5vw 2.3vw 1.6vw 2.3vw !important;
+      }
+    }
+  }
+
+  &.panel_nmargin {
+    @media (min-width: $pointDesktop) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 0;
+    }
+  }
+
+  &.panel_simple {
+    padding: 0;
+  }
+
+  .panel__data {
+    box-sizing: border-box;
+
+    @media (min-width: $pointDesktop) {
+      @include flex-item(75%)
+    }
+
+    @media (max-width: $pointMobile) {
+      display: block;
+    }
+
+    &.panel__data_full {
+      @media (min-width: $pointDesktop) {
+        @include flex-item(100%)
+      }
+
+      @media (max-width: $pointMobile) {
+        width: 100%;
+      }
+    }
+
+    &.panel__data_radial-white {
+      background-color: #ffffff;
+
+      @media (min-width: $pointLargeDesktop) {
+        border-radius: 25px;
+        padding: 21px 24px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        border-radius: 2vw;
+        padding: 1.5vw 1.7vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        border-radius: 6vw;
+        padding: 4.1vw 4.8vw;
+      }
+    }
+  }
+
+  .panel__helper {
+    box-sizing: border-box;
+
+    @media (min-width: $pointDesktop) {
+      @include flex-item(20%);
+    }
+
+    @media (max-width: $pointMobile) {
+      display: none;
+
+      &.panel__helper_mobile {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+      }
+    }
+  }
+}

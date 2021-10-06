@@ -1,0 +1,27 @@
+.action-form {
+  display: block;
+  background-color: map_get($colorsMap, componentsActionFormBackground);
+  box-sizing: border-box;
+  margin-bottom: 21px;
+
+  &.action-form_font-light {
+    font-weight: $fontWeightLight;
+  }
+
+  @media (min-width: $pointLargeDesktop) {
+    border-radius: 28px;
+    width: 378px;
+    padding: 23px 31px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    border-radius: 2vw;
+    width: 27vw;
+    padding: 1.7vw 2.3vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    border-radius: 6vw;
+    padding: 5vw 4.5vw;
+  }
+}

@@ -1,0 +1,82 @@
+version: "3"
+
+services:
+
+  app:
+    image: eustatos/wp-cli
+    container_name: app
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./www/:/var/www/html/
+    environment:
+      WORDPRESS_DB_HOST: ${MYSQL_HOST}
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
+    env_file: ./.env
+    depends_on:
+      - mailhog
+    links:
+      - mailhog
+
+  adminer:
+    image: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+    restart: always
+    ports:
+      - 5000:8080
+
+  mysql:
+    build: ./boilerplate/containers/mariadb
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - ${MYSQL_LOCAL_PORT}:3306
+    volumes:
+      - ./boilerplate/logs/mysql:/var/log/mysql
+      - ./boilerplate/data/mysql:/var/lib/mysql #Сохранение файлов таблиц в репозитории
+      - ./boilerplate/data/backup:/backup
+    restart: always
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    links:
+      - mysql
+    ports:
+      - '${PHPMYADMIN_PORT}:80'
+    depends_on:
+      - mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - PMA_HOST=mysql
+      - UPLOAD_LIMIT=180M
+
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
+
+  redis:
+    image: redis:${REDIS_VERSION}
+    ports:
+      - "${REDIS_HOST_PORT}:6379"
+    volumes:
+      - ${REDIS_CONF_FILE}:/etc/redis.conf:ro
+      - ./boilerplate/redis:/data/:rw
+    restart: always
+    entrypoint: ["redis-server", "/etc/redis.conf"]
+
+  memcached:
+    image: memcached:${MEMCACHED_VERSION}
+    ports:
+      - "${MEMCACHED_HOST_PORT}:11211"
+    environment:
+       MEMCACHED_CACHE_SIZE: "${MEMCACHED_CACHE_SIZE}"

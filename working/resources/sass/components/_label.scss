@@ -1,0 +1,76 @@
+.label {
+  display: inline-block;
+  font-weight: $fontWeightLight;
+  background-color: map_get($colorsMap, componentsLabelBackground);
+  vertical-align: middle;
+
+  @media (min-width: $pointLargeDesktop) {
+    font-size: 14px;
+    border-radius: 26px;
+    margin-right: 21px;
+    padding: 7px 19px 10px 19px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    font-size: 1vw;
+    border-radius: 2vw;
+    margin-right: 1.5vw;
+    padding: 0.5vw 1.4vw 0.7vw 1.4vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    box-sizing: border-box;
+    font-size: 3vw;
+    border-radius: 4vw;
+    padding: 2vw 5.5vw;
+
+    margin-bottom: 3.2vw;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.label_white {
+    background-color: #ffffff;
+  }
+
+  &.label_no-background {
+    background-color: transparent;
+  }
+
+  &.label_clear {
+    margin: 0;
+
+    @media (min-width: $pointLargeDesktop) {
+      padding: 9px 0;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      padding: 0.6vw 0;
+    }
+  }
+
+  &.label_bordered {
+    border: 1px solid #000000;
+    border-radius: 100px;
+  }
+
+  &.label_margined {
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 20px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 0.7vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+      margin-bottom: 2.6vw;
+    }
+  }
+
+  &.label_text-gray {
+    color: map_get($colorsMap, componentsLabelTextGray);
+  }
+}

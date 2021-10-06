@@ -1,0 +1,123 @@
+.list {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &.list_numeric {
+    list-style-type: decimal;
+
+    .list__item {
+      display: list-item !important;
+    }
+  }
+
+  &.list_margined {
+    .list__item {
+      display: block;
+
+      @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 17px !important;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 1.2vw !important;
+      }
+
+      @media (max-width: $pointMobile) {
+
+      }
+    }
+  }
+
+  &.list_horizontal {
+    vertical-align: middle;
+
+    .list__item {
+      display: inline-block;
+
+      @media (min-width: $pointLargeDesktop) {
+        margin-right: 35px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-right: 2.5vw;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: $pointMobile) {
+
+      }
+    }
+  }
+
+  &.list_block {
+    display: block;
+  }
+
+  &.list_vertical {
+    .list__item {
+      display: block;
+
+      @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 9px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 0.6vw;
+      }
+
+      @media (max-width: $pointMobile) {
+
+      }
+
+      &.list__item_mtop {
+        @media (min-width: $pointLargeDesktop) {
+          margin-top: 9px;
+        }
+
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          margin-top: 0.6vw;
+        }
+
+        @media (max-width: $pointMobile) {
+
+        }
+      }
+    }
+  }
+}
+
+.list__item {
+  padding: 0;
+  margin: 0;
+
+  &.list__item_title {
+    font-weight: $fontWeightBold;
+    color: map_get($colorsMap, componentsTitleWhite);
+  }
+
+  &.list__item_light {
+    font-weight: $fontWeightLight;
+    color: map_get($colorsMap, componentsTitleWhite);
+
+    & a{
+      color: map_get($colorsMap, componentsTitleWhite);
+    }
+  }
+
+  &.list__item_selected {
+    font-weight: $fontWeightSemiBold;
+  }
+
+  &.list__item_clear {
+    margin: 0 !important;
+  }
+}

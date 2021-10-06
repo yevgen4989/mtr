@@ -1,0 +1,101 @@
+.promo-panel {
+    display: block;
+    box-sizing: border-box;
+
+    @media (min-width: $pointLargeDesktop) {
+        width: 904px;
+        margin: 0 auto 280px auto;
+
+    }
+    
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 64.6vw;
+        margin: 0 auto 20vw auto;
+    }
+    
+    @media (max-width: $pointMobile) {
+        width: 100%;
+        margin: 0 auto 31.8vw auto;
+    }
+}
+
+.promo-panel__wrapper {
+    display: block;
+    width: 100%;
+
+    @media (min-width: $pointDesktop) {
+        @include flex-container();
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+
+    &.promo-panel__wrapper_reverse-mobile {
+        @media (max-width: $pointMobile) {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .promo-panel__wrapper__half { 
+        display: block;
+
+        @media (min-width: $pointDesktop) {
+            @include flex-item(45%);
+            max-width: 45%;
+        }
+        
+        @media (max-width: $pointMobile) {
+            width: 100%;
+            margin-bottom: 13.3vw;
+        }
+
+        &.promo-panel__wrapper__half_no-divided-mobile {
+            @media (max-width: $pointMobile) {
+                margin-bottom: 0;
+            }
+        }
+
+
+        &.promo-panel__wrapper__half_mobile-text {
+            @media (max-width: $pointMobile) {
+                padding: 0 8.1vw;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .promo-panel__wrapper__half_big {
+        display: block;
+
+        @media (min-width: $pointDesktop) {
+            @include flex-item(48%);
+            max-width: 48%;
+        }
+        
+        @media (max-width: $pointMobile) {
+            width: 100%;
+            margin-bottom: 13.3vw;
+        }
+
+        &.promo-panel__wrapper__half_no-divided-mobile {
+            @media (max-width: $pointMobile) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .promo-panel__wrapper__full {
+        display: block;
+
+        @media (min-width: $pointDesktop) {
+            @include flex-item(100%);
+        }
+        
+        @media (max-width: $pointMobile) {
+            width: 100%;
+        }        
+    }
+}

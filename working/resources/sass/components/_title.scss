@@ -1,0 +1,125 @@
+.title {
+  display: block;
+  font-weight: $fontWeightBold;
+  font-family: 'GothamPro', sans-serif;
+  padding: 0;
+  line-height: 1;
+
+  .title__explanation {
+    font-weight: $fontWeightLight;
+    font-family: 'GothamPro', sans-serif;
+
+    &.title__explanation_as-block {
+      display: block;
+
+      @media (max-width: $pointMobile) {
+        display: inline;
+      }
+    }
+  }
+
+  br {
+    @media (max-width: $pointMobile) {
+      display: none;
+    }
+  }
+
+  &.title_no-margin {
+    margin: 0 !important;
+  }
+
+  &.title_white {
+    color: map_get($colorsMap, componentsTitleWhite);
+  }
+
+  &.title__mtop {
+    @media (min-width: $pointLargeDesktop) {
+      margin-top: 26px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-top: 1.9vw;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+
+  &.title__size1 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 42px;
+      margin-bottom: 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 3vw;
+      margin-bottom: 1.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 8vw;
+      margin-bottom: 5vw;
+    }
+  }
+
+  &.title__size2 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 32px;
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 2.2vw;
+      margin-bottom: 1.2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 7vw;
+    }
+  }
+
+  &.title__size3 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 25px;
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.8vw;
+      margin-bottom: 1.2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 5.5vw;
+    }
+  }
+
+  &.title__size4 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 24px;
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.7vw;
+      margin-bottom: 1.2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+
+  &.title__mbottom {
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 4vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 14.5vw;
+    }
+  }
+}

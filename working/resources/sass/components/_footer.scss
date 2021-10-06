@@ -1,0 +1,191 @@
+footer {
+  display: block;
+  background: map_get($colorsMap, componentsFooterBackground);
+
+  @media (min-width: $pointLargeDesktop) {
+    box-sizing: border-box;
+    width: $largeDesktopContainerWidth;
+    margin: 0 auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 31px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    padding: 2.5vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    border-top-left-radius: 4vw;
+    border-top-right-radius: 4vw;
+    padding: 8.5vw 4.5vw 0.1px 4.5vw;
+  }
+
+  .footer__logo-line {
+    display: block;
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 37px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 2.7vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 9.8vw;
+    }
+
+    img {
+      display: inline-block;
+
+      @media (min-width: $pointLargeDesktop) {
+        width: 194px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 13.6vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        width: 47.6vw;
+      }
+    }
+  }
+
+  .footer__menu-line {
+    @media (min-width: $pointLargeDesktop) {
+      @include flex-container(nowrap, stretch, flex-start);
+      margin-bottom: 53px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      @include flex-container(nowrap, stretch, flex-start);
+      margin-bottom: 3.8vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 9.8vw;
+    }
+
+    .footer__menu-line__item {
+      box-sizing: border-box;
+
+      &.mobile_new {
+        text-align: right;
+      }
+
+      @media (min-width: $pointLargeDesktop) {
+        @include flex-item(506px);
+        padding-right: 22px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        @include flex-item(16.4%);
+        padding-right: 2.3vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        display: none;
+      }
+
+      &.footer__menu-line__item__mobile {
+        @media (max-width: $pointMobile) {
+          display: block;
+
+          .list__item {
+            margin-bottom: 4vw;
+          }
+        }
+      }
+
+      &.footer__menu-line__item_big {
+
+        @media (min-width: $pointLargeDesktop) {
+          @include flex-item(302px);
+        }
+
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          @include flex-item(25%);
+        }
+
+        @media (max-width: $pointMobile) {
+
+        }
+      }
+
+    }
+
+  }
+
+  .footer__schedule-line {
+
+    @media (min-width: $pointLargeDesktop) {
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      display: block;
+      margin-bottom: 3.6vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      display: none;
+    }
+
+    &.footer__schedule-line_mobile {
+      display: none;
+
+      @media (max-width: $pointMobile) {
+        display: block;
+        margin-bottom: 9.8vw;
+      }
+    }
+  }
+
+  .footer__copyright-line {
+    color: map_get($colorsMap, componentsTitleWhite);
+
+    & a{
+      color: map_get($colorsMap, componentsTitleWhite);
+    }
+    @media (min-width: $pointDesktop) {
+      @include flex-container();
+    }
+
+    @media (max-width: $pointMobile) {
+      display: block;
+    }
+
+    .footer__copyright-line__left-side {
+      text-align: left;
+
+      @media (min-width: $pointDesktop) {
+        @include flex-item(70%);
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+        margin-bottom: 9.8vw;
+      }
+    }
+
+    .footer__copyright-line__right-side {
+
+      @media (min-width: $pointDesktop) {
+        @include flex-item(20%);
+        text-align: right;
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+        text-align: left;
+        box-sizing: border-box;
+        padding-bottom: 3.7vw;
+      }
+    }
+  }
+}

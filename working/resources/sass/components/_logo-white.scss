@@ -1,0 +1,31 @@
+.logo-white {
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $pointLargeDesktop) {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 616px;
+    height: 74px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    margin-top: 11.3vw;
+    margin-bottom: 11.3vw;
+    width: 44vw;
+    height: 5.3vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: $pointMobile) {
+    margin-top: 35vw;
+    width: 84vw;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+}

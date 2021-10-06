@@ -1,0 +1,10 @@
+/*
+Theme Name: MTR
+Version: 0.1.1
+License: MIT
+Text Domain: localhost
+*/
+
+li#wp-admin-bar-break .ab-item{
+  background-color: green;
+}

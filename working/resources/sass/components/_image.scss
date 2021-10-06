@@ -1,0 +1,23 @@
+.image {
+  display: inline-block;
+  border: 0;
+
+  &.image_blocked {
+    display: block;
+  }
+
+  &.image_centered {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &.image_responsive {
+    width: 100%;
+  }
+
+  &.image_responsive-mobile {
+    @media (max-width: $pointMobile) {
+      width: 100%;
+    }
+  }
+}

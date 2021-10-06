@@ -1,0 +1,114 @@
+.total-block {
+  .total-block__price {
+    font-weight: $fontWeightNormal;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 47px;
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 3.4vw;
+      margin-bottom: 2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 12vw;
+      margin-bottom: 6.9vw;
+    }
+
+    .total-block__price__currency {
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: 0;
+
+      @media (min-width: $pointLargeDesktop) {
+
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+
+      }
+
+      @media (max-width: $pointMobile) {
+      }
+    }
+
+    .total-block__price__explanation {
+      display: block;
+      font-weight: $fontWeightLight;
+
+      @media (min-width: $pointLargeDesktop) {
+        font-size: 16px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        font-size: 1.1vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        font-size: 4vw;
+      }
+    }
+  }
+
+  .total-block__action {
+    display: block;
+    width: 100%;
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 39px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 2.8vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 6.9vw;
+    }
+  }
+
+  .total-block__info {
+    display: block;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 12px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 0.85vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 3.2vw;
+    }
+
+
+    p {
+      margin-top: 0;
+      font-weight: $fontWeightLight;
+      color: map_get($colorsMap, componentsTotalBlockInfoColor);
+
+      @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 14px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 1vw;
+      }
+
+      @media (max-width: $pointMobile) {
+
+      }
+
+      a {
+        color: map_get($colorsMap, componentsTotalBlockInfoColor);
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+$pointLargeDesktop: 1400px;
+$pointDesktopMax: 1399px;
+$pointDesktop: 720px;
+$pointMobile: 719px;
+
+$colorsMap: (
+        commonBodyBackground: #f1f1f1,
+        commonBodyTextColor: #000000,
+
+        componentsHeaderMenuBackground: #ffffff,
+        componentsFooterBackground: #404040,
+
+        componentsContentGrindItemBackgreound: #ffffff,
+
+        componentsButtonDefaultBackground: #f1f1f1,
+        componentsButtonDefaultHoverColor: #dddddd,
+        componentsButtonActiveBackground: #898989,
+        componentsButtonActiveColor: #ffffff,
+        componentsButtonSuccessBackground: #32a965,
+        componentsButtonSuccessHoverBackground: #398057,
+        componentsButtonSuccessTextColor: #ffffff,
+
+        componentsTitleWhite: #ffffff,
+        componentsLabelBackground: #e8e8e8,
+        componentsLabelTextGray: #bababa,
+
+        componentsAnnouncementBorderColor: #d1d1d1,
+
+        componentsFormControlPlaceholderColor: #000000,
+        componentsFormControlDefaultBackground: #f1f1f1,
+        componentsFormControlWhiteBackground: #ffffff,
+        componentsFromControlBorderColor: #d1d1d1,
+
+        componentsActionFormBackground: #ffffff,
+
+        componentsTotalBlockInfoColor: #e74c3c,
+
+        trackingSubtitleColor: #7c7c7c,
+        trackingNoteColor: #898989,
+);
+
+$fontWeightThin: 100;
+$fontWeightExtraLight: 200;
+$fontWeightLight: 300;
+$fontWeightNormal: 400; //Regular
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightExtraBold: 800;
+$fontWeightUltraBold: 900; //Black
+
+/*
+Максимальная ширина при очень большом разрешении свыше 2600px
+ */
+$largeDesktopContainerWidth: 1303px;

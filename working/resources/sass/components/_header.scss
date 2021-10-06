@@ -1,0 +1,390 @@
+header {
+  display: block;
+
+  @media (min-width: $pointLargeDesktop) {
+    width: $largeDesktopContainerWidth;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    width: 100%;
+  }
+
+  @media (max-width: $pointMobile) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.header__main-line {
+
+  @media (min-width: $pointLargeDesktop) {
+    @include flex-container();
+    padding: 23px 30px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    @include flex-container();
+    padding: 1.5vw 2.2vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: block;
+    position: relative;
+    padding: 5.7vw 4.8vw 0 5.7vw;
+    z-index: 4;
+  }
+}
+
+.header__main-line__logo {
+  text-align: left;
+
+  @media (min-width: $pointDesktop) {
+    @include flex-item(50%);
+  }
+
+  @media (max-width: $pointMobile) {
+    @include flex-container();
+    width: 100%;
+  }
+
+  a {
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $pointDesktop) {
+      display: inline-block;
+    }
+
+    @media (max-width: $pointMobile) {
+      display: block;
+      @include flex-item(60%);
+    }
+
+    img {
+      display: inline-block;
+
+      @media (min-width: $pointLargeDesktop) {
+        width: 123px;
+        height: 33px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 6.7vw;
+        height: 1.8vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        width: 22.6vw;
+        height: 5.7vw;
+      }
+    }
+  }
+
+  .header__main-line__mobile-menu-line {
+    @media (min-width: $pointDesktop) {
+      display: none;
+    }
+
+    @media (max-width: $pointMobile) {
+      @include flex-item(35%);
+      text-align: right;
+    }
+
+    .header__main-line__mobile-menu-line__menu {
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+      background: url('../img/icon_mobile.svg') no-repeat center;
+      width: 6.6vw;
+      height: 6.6vw;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.header__main-line__mobile-menu-line__menu_active {
+        background: url('../img/icon_mobile_close.svg') no-repeat center;
+      }
+    }
+  }
+}
+.header__main-line__phones {
+  text-align: right;
+  font-weight: $fontWeightNormal;
+
+  @media (min-width: $pointLargeDesktop) {
+    @include flex-item(50%);
+    font-size: 19px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    @include flex-item(50%);
+    font-size: 1.3vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: none;
+  }
+}
+
+.header__menu {
+  display: block;
+
+  @media (max-width: $pointMobile) {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 100vw;
+    top: 0;
+    box-sizing: border-box;
+    font-size: 4.4vw;
+    background: map_get($colorsMap, componentsHeaderMenuBackground);
+    padding: 22vw 0 10vw 0;
+
+    @include transition(left, 0.8s, ease, 0.1s);
+
+
+    &.header__menu_active {
+      left: 0;
+    }
+  }
+}
+
+.header__menu__wrapper {
+  @media (min-width: $pointLargeDesktop) {
+    @include flex-container();
+    background: map_get($colorsMap, componentsHeaderMenuBackground);
+    border-radius: 26px;
+    padding: 12px 31px 12px 31px;
+    line-height: 1;
+  }
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    @include flex-container();
+    background: map_get($colorsMap, componentsHeaderMenuBackground);
+    border-radius: 4vw;
+    padding: 0.7vw 2.2vw 0.9vw 2.2vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    z-index: 3;
+    background: map_get($colorsMap, componentsHeaderMenuBackground);
+    padding: 0 7.9vw;
+  }
+}
+
+.header__menu__mobile-phones {
+  @media (min-width: $pointDesktop) {
+    display: none;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: block;
+
+    .list.list_horizontal {
+      .list__item {
+        display: block;
+        margin-bottom: 5vw;
+        font-weight: $fontWeightLight;
+      }
+    }
+  }
+}
+
+.header__menu__menu-block {
+  font-weight: $fontWeightLight;
+
+  @media (min-width: $pointDesktop) {
+    @include flex-item(85%);
+    text-align: left;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: block;
+    margin-bottom: 6vw;
+
+    .list.list_horizontal {
+      .list__item {
+        display: block;
+      }
+    }
+  }
+
+  .list_horizontal {
+    .list__item {
+      @media (min-width: $pointLargeDesktop) {
+        margin-right: 46px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-right: 3.4vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        margin-bottom: 5vw;
+      }
+    }
+  }
+}
+
+.header__menu__social-block {
+  @media (min-width: $pointDesktop) {
+    @include flex-item(15%);
+    text-align: right;
+  }
+
+  @media (max-width: $pointMobile) {
+    margin-bottom: 10.5vw;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+
+    @media (min-width: $pointLargeDesktop) {
+      height: 19px;
+    }
+
+    @media (max-width: $pointDesktopMax) {
+      height: 1.3vw;
+    }
+  }
+
+  .list.list_horizontal {
+
+    @media (max-width: $pointMobile) {
+      display: none;
+    }
+
+    .list__item {
+      @media (min-width: $pointLargeDesktop) {
+        margin-right: 9px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-right: 0.5vw;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+
+      img {
+        opacity: 0.3;
+        @include transition(opacity, 0.3s, ease, 0.1s);
+      }
+
+      &:hover {
+        img {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .header__menu__social-block__mobile-social {
+    @media (min-width: $pointDesktop) {
+      display: none;
+    }
+
+    @media (max-width: $pointMobile) {
+      display: block;
+
+      .list__item {
+        margin-bottom: 5vw;
+      }
+    }
+  }
+}
+
+//Часть отвечающая за промо страницы
+header {
+  &.header_promo {
+    .header__main-line {
+      @media (max-width: $pointMobile) {
+        @include flex-container();
+        padding: 5.7vw 0 0 0;
+      }
+    }
+
+
+    .header__main-line__logo {
+      @media (min-width: $pointDesktop) {
+        @include flex-item(40%);
+      }
+  
+      @media (max-width: $pointMobile) {
+        display: block;
+       @include flex-item(40%);
+      }
+
+      img {
+        @media (max-width: $pointMobile) {
+          width: 30.6vw;
+          height: auto;
+          margin-top: -2vw;
+        }
+      }
+    }
+
+    .header__main-line__phones {
+      @media (min-width: $pointDesktop) {
+        padding-top: 0.5vw;
+        @include flex-item(60%);
+      }
+  
+      @media (max-width: $pointMobile) {
+        display: block;
+        @include flex-item(60%);        
+      }
+
+      a {
+        font-weight: $fontWeightBold;
+      }
+
+      .button {
+        @media (min-width: $pointDesktop) {
+          border-radius: 2vw;
+          font-size: 1.1vw;
+          padding: 0.8vw 1.4vw 0.6vw 1.4vw;
+          width: 15vw;
+        }
+
+        @media (max-width: $pointMobile) {
+          display: block; 
+          margin-bottom: 0;
+          font-size: 3.2vw;
+          padding: 2.5vw 5.8vw 1.8vw 5.8vw;
+        }
+      }
+
+      .list {
+        &.list_horizontal {
+          .list__item {
+            
+
+            @media (max-width: $pointMobile) {
+              display: none;
+
+              &:last-child {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

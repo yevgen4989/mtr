@@ -1,0 +1,231 @@
+.media-object {
+  display: block;
+
+  &.media-object_center {
+    @media (min-width: $pointDesktop) {
+      text-align: center;
+    }
+
+    @media (max-width: $pointMobile) {
+      text-align: left;
+    }
+  }
+
+  &.media-object_restrict-centered-block {
+    margin: 0 auto;
+
+    @media (min-width: $pointLargeDesktop) {
+      width: 630px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      width: 45vw;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+
+  .media-object__image-fixed {
+    @media (min-width: $pointLargeDesktop) {
+      height: 219px;
+      width: auto;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      height: 15.6vw;
+      width: auto;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+
+    &.media-object__image-fixed_responsible-mobile {
+      @media (max-width: $pointMobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  .media-object__image-radius {
+    @media (min-width: $pointLargeDesktop) {
+      border-radius: 26px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      border-radius: 1vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      border-radius: 3.4vw;
+    }
+  }
+
+  .media-object__title {
+    display: block;
+
+    &.media-object__title_margin-big {
+      @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 49px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 3.5vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        margin-bottom: 10.1vw;
+      }
+    }
+
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 1.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 4.8vw;
+    }
+  }
+
+  .media-object__content {
+    display: block;
+
+    &.media-object__content_margin-big {
+      @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 45px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 3.2vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        margin-bottom: 10.3vw;
+      }
+    }
+
+    &.media-object__content_margin-big_middle {
+      @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 45px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 3.2vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        margin-bottom: 6vw;
+      }
+    }
+
+    &.media-object__content_fix-height {
+      overflow: hidden;
+
+      @media (min-width: $pointLargeDesktop) {
+        height: 159px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        height: 11.4vw;
+      }
+
+      @media (max-width: $pointMobile) {
+
+      }
+    }
+
+    &.media-object__content_nmargin {
+      margin: 0;
+    }
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 1.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 10.3vw;
+    }
+  }
+
+  .media-object__link {
+    display: block;
+    overflow: hidden;
+    @media (min-width: $pointLargeDesktop) {
+
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+}
+
+
+.form-white {
+  .media-object {
+    .media-object__content {
+      overflow: hidden;
+      width: 100%;
+
+      @media (min-width: $pointLargeDesktop) {
+        border-radius: 26px;
+        margin-bottom: 27px;
+      }
+  
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        border-radius: 2vw;
+        margin-bottom: 2vw;
+      }
+  
+      @media (max-width: $pointMobile) {
+        border-radius: 3.4vw;
+      }
+    }
+  }
+  
+  .media-object__image-fixed {
+    @media (min-width: $pointLargeDesktop) {
+      height: 225px;
+      min-width: 100%;
+    }
+    
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      height: 16.1vw;
+      min-width: 100%;
+    }
+
+    @media (max-width: $pointMobile) {
+      height: 53vw;
+      min-width: 100%;
+    }
+  }
+
+  .title {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      line-height: 1.2;
+      font-size: 1.3vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      
+    }
+
+  }
+}

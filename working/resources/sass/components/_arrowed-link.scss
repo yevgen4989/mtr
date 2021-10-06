@@ -1,0 +1,88 @@
+.arrowed-link {
+  display: inline-block;
+  text-align: left;
+
+  &:hover {
+    .arrowed-link__arrow {
+      img {
+        right: 0;
+      }
+    }
+  }
+
+  &.arrowed-link__centered {
+    @media (min-width: $pointDesktop) {
+      //margin-left: 3vw;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+
+  .arrowed-link__title {
+    display: block;
+    width: 100%;
+    font-weight: $fontWeightBold;
+    box-sizing: border-box;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 18px;
+      padding-right: 42px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.3vw;
+      padding-right: 3vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 4.8vw;
+      padding-right: 4vw;
+    }
+  }
+
+  .arrowed-link__arrow {
+    display: block;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media (min-width: $pointLargeDesktop) {
+      height: 10px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      height: 1vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      height: 3.2vw;
+    }
+
+    img{
+      display: inline-block;
+      position: absolute;
+      top: 0;
+
+      @include transition(right, 0.5s, ease, 0s);
+
+      @media (min-width: $pointLargeDesktop) {
+        right: 28px;
+        height: 10px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        height: 1vw;
+        right: 1.8vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        height: 3.2vw;
+        right: 0.5vw;
+      }
+    }
+  }
+
+
+}

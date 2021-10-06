@@ -1,0 +1,18 @@
+.errors-number {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $pointLargeDesktop) {
+    width: 486px;
+    margin-top: 99px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax)  {
+    width: 34.8vw;
+    margin-top: 7.1vw;
+  }
+
+  @media (max-width: $pointMobile) {
+
+  }
+}

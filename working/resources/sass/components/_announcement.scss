@@ -1,0 +1,210 @@
+.announcement {
+
+  @media (min-width: $pointDesktop) {
+    @include flex-container(wrap, stretch, flex-start);
+    width: 100%;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: block;
+  }
+
+  /*
+    Модификатор позволяющий отображать элемент как одиночный на весь экран
+   */
+  &.announcement_single {
+    width: 100%;
+
+    @media (min-width: $pointLargeDesktop) {
+      display: block;
+      margin-bottom: 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      display: block;
+      margin-bottom: 1.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      display: block;
+    }
+
+    .announcement__item {
+      @media (min-width: $pointDesktop) {
+        width: 100%;
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+        box-sizing: border-box;
+        padding: 7.4vw 5.3vw 5.3vw 5.3vw;
+        margin-bottom: 2.9vw;
+        min-height: 95vw;
+        border-radius: 6vw;
+      }
+
+      &:nth-child(odd) {
+        @media (min-width: $pointDesktop) {
+          margin: 0 !important;
+        }
+
+        @media (max-width: $pointMobile) {
+        }
+      }
+
+      .announcement__item__background {
+
+        @media (max-width: $pointMobile) {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .announcement__item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    @media (min-width: $pointLargeDesktop) {
+      @include flex-item(608px);
+      padding: 31px 31px 21px 31px;
+      margin-bottom: 21px;
+      min-height: 220px;
+      border-radius: 28px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      @include flex-item(49.14%);
+      padding: 2.3vw 2.3vw 1.6vw 2.3vw;
+      margin-bottom: 1.5vw;
+      min-height: 15.9vw;
+      border-radius: 2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      display: block;
+      box-sizing: border-box;
+      padding: 6vw 5.3vw 5.3vw 5.3vw;
+      margin-bottom: 2.9vw;
+      min-height: 55vw;
+      border-radius: 6vw;
+    }
+
+
+    &:nth-child(odd) {
+      @media (min-width: $pointLargeDesktop) {
+        margin-right: 21px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-right: 1.4vw;
+      }
+
+      @media (max-width: $pointMobile) {
+      }
+    }
+
+    &.announcement__item__bordered {
+      border: 2px solid map_get($colorsMap, componentsAnnouncementBorderColor);
+    }
+
+    .announcement__item__background {
+      position: absolute;
+      display: block;
+      z-index: 0;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+      @media (max-width: $pointMobile) {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .announcement__item__gradient {
+      position: absolute;
+      display: block;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(to bottom, rgba(137, 137, 137, 1), transparent);
+
+      &.announcement__item__gradient_black {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+      }
+    }
+
+    .announcement__item__title {
+      display: block;
+      position: relative;
+      z-index: 1;
+
+      &.announcement__item__title_text {
+        font-family: 'GothamPro', sans-serif;
+        font-weight: $fontWeightBold;
+        line-height: 1;
+        color: #ffffff;
+
+        @media (min-width: $pointLargeDesktop) {
+          font-size: 38px;
+        }
+
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          font-size: 2.7vw;
+        }
+
+        @media (max-width: $pointMobile) {
+          font-size: 8vw;
+        }
+
+        .announcement__item__title_text_explanation {
+          display: block;
+          font-family: 'GothamPro', sans-serif;
+          font-weight: $fontWeightLight;
+
+          @media (min-width: $pointLargeDesktop) {
+            font-size: 18px;
+          }
+
+          @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+            font-size: 1.3vw;
+          }
+
+          @media (max-width: $pointMobile) {
+            font-size: 4vw;
+            line-height: 1.2;
+            margin-top: 1.6vw;
+          }
+        }
+      }
+    }
+
+    .announcement__item__labels {
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+
+      @media (min-width: $pointLargeDesktop) {
+        bottom: 21px;
+      }
+
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        bottom: 1.6vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        bottom: 5.4vw;
+      }
+    }
+  }
+
+}

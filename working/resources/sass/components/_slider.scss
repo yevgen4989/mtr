@@ -1,0 +1,301 @@
+.slider {
+  display: block;
+
+  .slider__content-place {
+    display: block;
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 28px;
+
+      &:last-child {
+        margin-bottom: 13px;
+      }
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 2vw;
+
+      &:last-child {
+        margin-bottom: 1vw;
+      }
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 6.6vw;
+
+      &:last-child {
+        margin-bottom: 4vw;
+      }
+    }
+
+    &.slider__content-place__like-input {
+      overflow: hidden;
+      background-color: map_get($colorsMap, componentsFormControlDefaultBackground);
+      box-sizing: border-box;
+      border-width: 0;
+      font-weight: $fontWeightLight;
+      font-family: 'GothamPro', sans-serif;
+
+      @media (min-width: $pointLargeDesktop) {
+        width: 616px;
+        border-radius: 26px;
+        padding: 7px 19px 10px 19px;
+        font-size: 16px;
+      }
+  
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 44vw;
+        border-radius: 3vw;
+        padding: 0.5vw 1.4vw 0.7vw 1.4vw;
+        font-size: 1.1vw;
+      }
+  
+      @media (max-width: $pointMobile) {
+        border-radius: 6vw;
+        padding: 3.2vw 5.7vw;
+        font-size: 4vw;
+      }
+
+      sub {
+        line-height: 0.9;
+  
+        @media (min-width: $pointLargeDesktop) {
+          font-size: 16px;
+        }
+  
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          font-size: 1.1vw;
+        }
+  
+        @media (max-width: $pointMobile) {
+          font-size: 4vw;
+        }
+  
+        sup {
+          @media (min-width: $pointLargeDesktop) {
+            font-size: 14px;
+          }
+  
+          @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+            font-size: 1vw;
+          }
+  
+          @media (max-width: $pointMobile) {
+            font-size: 3.4vw;
+          }
+        }
+      }
+
+      .slider__input-place {
+        height: auto;
+
+        @media (min-width: $pointLargeDesktop) {
+          font-size: 16px;
+          min-width: 16px;
+          padding: 0;
+
+        }
+    
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          font-size: 1.1vw;
+          min-width: 1.1vw;
+          padding: 0;
+        }
+    
+        @media (max-width: $pointMobile) {
+          font-size: 4vw;
+          padding: 0;
+        }
+      }
+
+    }
+
+    sub {
+      line-height: 0;
+
+      @media (min-width: $pointLargeDesktop) {
+        font-size: 32px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        font-size: 2.3vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        font-size: 8vw;
+      }
+
+      sup {
+        @media (min-width: $pointLargeDesktop) {
+          font-size: 14px;
+        }
+
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          font-size: 1vw;
+        }
+
+        @media (max-width: $pointMobile) {
+          font-size: 3.4vw;
+        }
+      }
+    }
+  }
+
+  //main container
+  .slider__toggle {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $pointLargeDesktop) {
+      height: 4px;
+      //width: 323px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      height: 0.3vw;
+      //width: 24vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      height: 1.3vw;
+
+    }
+
+    .slider__toggle__background {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      background: #000000;
+      position: relative;
+
+      @media (min-width: $pointLargeDesktop) {
+        height: 4px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        height: 0.3vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        height: 1.3vw;
+      }
+
+
+      .slider__toggle__background__selected {
+        display: block;
+        width: 100%;
+        background: #dddddd;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media (min-width: $pointLargeDesktop) {
+          height: 4px;
+        }
+
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          height: 0.3vw;
+        }
+
+        @media (max-width: $pointMobile) {
+          height: 1.3vw;
+        }
+      }
+    }
+
+    .slider__toggle__pin {
+      display: block;
+      background: #ffffff;
+      cursor: pointer;
+      border-radius: 100%;
+      border: 2px solid #000000;
+      position: absolute;
+      left: 0;
+
+      @media (min-width: $pointLargeDesktop) {
+        width: 20px;
+        height: 20px;
+        top: -10px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 1.5vw;
+        height: 1.5vw;
+        top: -0.75vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        width: 4.6vw;
+        height: 4.6vw;
+        top: -2.3vw;
+      }
+    }
+  }
+
+  .slider__input-place {
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: $fontWeightNormal;
+    outline: none;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 80px;
+      min-width: 30px;
+      height: 57px;
+      padding: 0;
+      line-height: 0.9;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 5.7vw;
+      min-width: 2.1vw;
+      height: 4vw;
+      padding: 0;
+      line-height: 0.9;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 13.3vw;
+      padding: 0;
+      height: 9vw;
+      line-height: 0.9;
+    }
+  }
+
+  .slider__explanation {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+
+  .slider__input {
+    display: inline-block;
+    background: transparent;
+    @include input-clear();
+    text-align: left;
+    font-family: 'GothamPro', sans-serif;
+    font-weight: $fontWeightNormal;
+    vertical-align: bottom;
+
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 80px;
+      width: 56px;
+      height: 80px;
+      padding: 0;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 5.7vw;
+      width: 4vw;
+      height: 5.7vw;
+      padding: 0;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 15vw;
+      padding: 0;
+    }
+  }
+}

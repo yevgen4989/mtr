@@ -1,0 +1,152 @@
+.edited-text {
+  display: block;
+  width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+
+    @media (min-width: $pointLargeDesktop) {
+      border-radius: 25px;
+      margin: 0 0 36px 0;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      border-radius: 3vw;
+      margin: 0  0 2.6vw 0;
+    }
+
+    @media (max-width: $pointMobile) {
+      border-radius: 4vw;
+      margin: 0 0 11.7vw 0;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: $fontWeightSemiBold;
+  }
+
+
+  p {
+    display: block;
+    margin-top: 0;
+    font-weight: $fontWeightLight;
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 1.6vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 5.8vw;
+    }
+  }
+
+  h1, h2, h3, h4 {
+    display: block;
+    font-weight: $fontWeightBold;
+    font-family: 'GothamPro', sans-serif;
+    padding: 0;
+    line-height: 1.1;
+  }
+
+  h1 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 42px;
+      margin-bottom: 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 3vw;
+      margin-bottom: 1.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+
+  h2 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 38px;
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 2.7vw;
+      margin-bottom: 1.2vw;
+
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+
+  h3 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 25px;
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.8vw;
+      margin-bottom: 1.2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 6.4vw;
+      margin-bottom: 4.9vw;
+    }
+  }
+
+  h4 {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 24px;
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.7vw;
+      margin-bottom: 1.2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+
+  ul {
+    display: block;
+    list-style-type: circle;
+    font-weight: $fontWeightLight;
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 1.6vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 5.8vw;
+    }
+
+
+    li {
+      @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 11px;
+      }
+  
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 0.8vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        margin-bottom: 2.9vw;
+      }
+    }
+  }
+}

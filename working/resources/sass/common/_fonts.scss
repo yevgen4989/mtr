@@ -1,0 +1,41 @@
+@include font-face('Montserrat', 'Montserrat-Thin', normal, $fontWeightThin, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-ThinItalic', italic, $fontWeightThin, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-ExtraLight', normal, $fontWeightExtraLight, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-ExtraLightItalic', italic, $fontWeightExtraLight, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-Light', normal, $fontWeightLight, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-LightItalic', italic, $fontWeightLight, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-Regular', normal, $fontWeightNormal, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-Italic', italic, $fontWeightNormal, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-Medium', normal, $fontWeightMedium, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-MediumItalic', italic, $fontWeightMedium, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-SemiBold', normal, $fontWeightSemiBold, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-SemiBoldItalic', italic, $fontWeightSemiBold, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-Bold', normal, $fontWeightBold, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-BoldItalic', italic, $fontWeightBold, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-ExtraBold', normal, $fontWeightExtraBold, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-ExtraBoldItalic', italic, $fontWeightExtraBold, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-Black', normal, $fontWeightUltraBold, eot ttf svg woff woff2);
+@include font-face('Montserrat', 'Montserrat-BlackItalic', italic, $fontWeightUltraBold, eot ttf svg woff woff2);
+
+@include font-face('Spectral', 'Spectral-ExtraLight', normal, $fontWeightExtraLight, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-ExtraLightItalic', italic, $fontWeightExtraLight, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-Light', normal, $fontWeightLight, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-LightItalic', italic, $fontWeightLight, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-Regular', normal, $fontWeightNormal, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-Italic', italic, $fontWeightNormal, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-Medium', normal, $fontWeightMedium, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-MediumItalic', italic, $fontWeightMedium, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-SemiBold', normal, $fontWeightSemiBold, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-SemiBoldItalic', italic, $fontWeightSemiBold, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-Bold', normal, $fontWeightBold, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-BoldItalic', italic, $fontWeightBold, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-ExtraBold', normal, $fontWeightExtraBold, eot ttf svg woff woff2);
+@include font-face('Spectral', 'Spectral-ExtraBoldItalic', italic, $fontWeightExtraBold, eot ttf svg woff woff2);
+
+@include font-face('Roboto', 'Roboto-Thin', normal, $fontWeightThin, eot svg ttf woff woff2);
+
+
+@include font-face('GothamPro', 'GothamPro', normal, $fontWeightNormal, eot ttf svg woff woff2);
+@include font-face('GothamPro', 'GothamPro-Black', normal, $fontWeightExtraBold, eot ttf svg woff woff2);
+@include font-face('GothamPro', 'GothamPro-Bold', normal, $fontWeightBold, eot ttf svg woff woff2);
+@include font-face('GothamPro', 'GothamPro-Light', normal, $fontWeightLight, eot ttf svg woff woff2);

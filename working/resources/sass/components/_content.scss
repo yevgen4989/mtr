@@ -1,0 +1,18 @@
+.content {
+  display: block;
+
+  @media (min-width: $pointLargeDesktop) {
+    width: $largeDesktopContainerWidth;
+    margin: 0 auto;
+    padding: 21px 0;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    min-height: 64vw;//39vw;
+    padding: 1.5vw 0;
+  }
+
+  @media (max-width: $pointMobile) {
+    padding: 4.8vw 0 2.9vw 0;
+  }
+}

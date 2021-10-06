@@ -1,0 +1,60 @@
+.armeria-logo {
+  display: inline-block;
+  color: #a5a4a2;
+  font-family: "Roboto", sans-serif;
+  font-weight: $fontWeightThin;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: 0.2s ease 0.2s;
+  text-align: left;
+
+  &:hover {
+    text-decoration: none;
+    color: #a5a4a2;
+    opacity: 1;
+  }
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+
+    @media (min-width: $pointLargeDesktop) {
+      width: 48px;
+      height: 48px;
+      margin-right: 7px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      width: 3.4vw;
+      height: 3.4vw;
+      margin-right: 0.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      width: 12.2vw;
+      height: 12.2vw;
+      margin-right: 2vw;
+    }
+  }
+
+  span {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.3;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 14px;
+      font-weight: $fontWeightThin;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1vw;
+      font-weight: $fontWeightThin;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 3.4vw;
+    }
+  }
+}

@@ -1,0 +1,215 @@
+.app {
+    @media (min-width: $pointDesktop) {
+        display: none;
+    }
+
+
+    @media (max-width: $pointMobile) {
+        display: block;
+        font-family: 'GothamPro', sans-serif;
+    }
+    
+    .app__panel {
+        @media (max-width: $pointMobile) {
+            display: block;
+            padding: 5.7vw 4.8vw 0 5.7vw;
+            margin-bottom: 8vw;
+        }
+
+        &.app__panel_white {
+            @media (max-width: $pointMobile) {
+                background: #ffffff;
+                border-radius: 6vw;
+            }
+        }
+
+        .title {
+            @media (max-width: $pointMobile) {
+                margin-bottom: 10.1vw !important;
+            }
+        }
+    }
+
+    .app__form {
+        @media (max-width: $pointMobile) {
+            display: block;
+            width: 100%;
+            padding-bottom: 5vw;
+        }
+    }
+
+    .app__message {
+        @media (max-width: $pointMobile) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 8vw;
+        }
+
+        &.app__message_info {
+            @media (max-width: $pointMobile) {
+                font-weight: $fontWeightBold;
+                color: #777777;
+                text-align: left;
+                font-size: 3vw;
+            }
+        }
+
+        &.app__message_primary {
+            @media (max-width: $pointMobile) {
+                font-weight: $fontWeightBold;
+                text-align: left;
+                font-size: 3vw;
+            }
+        }
+    }
+
+
+    .app__btn {
+        font-family: 'GothamPro', sans-serif;
+
+        @media (max-width: $pointMobile) {
+            display: block;
+            border: 1px solid #767676;
+            outline: none;
+            background: transparent;
+            width: 100%;
+            padding: 3.5vw 5.7vw;
+            font-weight: $fontWeightBold;
+            border-radius: 10vw;
+            margin-bottom: 8vw;
+            font-size: 3.5vw;
+            color: #000000;
+        }
+
+        &:active {
+            background: #767676;
+            color: #ffffff;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        &.app__btn_nmb {
+            margin-bottom: 0 !important;
+        }
+
+
+        &.app__btn_green {
+            border: 1px solid #32A965;
+            background: #32A965;
+            color: #ffffff;
+            
+            &:active {
+                background: #318354;
+                border: 1px solid #318354;
+            }
+        }
+    }
+
+    .app__select {
+        font-family: 'GothamPro', sans-serif;
+
+        @media (max-width: $pointMobile) {
+            display: block;
+            border: 1px solid #F1F1F1;
+            outline: none;
+            background: #F1F1F1;
+            width: 100%;
+            padding: 2vw 5.7vw;
+            box-sizing: border-box;
+            font-weight: $fontWeightLight;
+            border-radius: 10vw;
+            margin-bottom: 5vw;
+            font-size: 4vw;
+            color: #000000;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        &.app__select_error {
+            border: 1px solid #E74C3C;
+            color: #E74C3C;
+        }
+    }
+
+    .app__input {
+        font-family: 'GothamPro', sans-serif;
+        @media (max-width: $pointMobile) {
+            display: block;
+            border: 1px solid #F1F1F1;
+            outline: none;
+            background: #F1F1F1;
+            width: 100%;
+            padding: 2vw 5.7vw;
+            box-sizing: border-box;
+            font-weight: $fontWeightLight;
+            border-radius: 10vw;
+            margin-bottom: 5vw;
+            font-size: 4vw;
+            color: #000000;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        &.app__input_error {
+            border: 1px solid #E74C3C;
+            color: #E74C3C;
+        }
+
+        &.app__input_error::placeholder {
+            color: #E74C3C;
+        }
+    }
+
+    .app__textarea {
+        font-family: 'GothamPro', sans-serif;
+
+        @media (max-width: $pointMobile) {
+            display: block;
+            border: 1px solid #F1F1F1;
+            outline: none;
+            background: #F1F1F1;
+            width: 100%;
+            padding: 2vw 5.7vw;
+            box-sizing: border-box;
+            font-weight: $fontWeightLight;
+            border-radius: 5.3vw;
+            margin-bottom: 5vw;
+            font-size: 4vw;
+            color: #000000;
+            max-height: 30vw;
+            min-height: 30vw;
+            resize: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    }
+
+    .app__input::placeholder {
+        color: #767676;
+      }
+
+    .app__sociallinks {
+        @media (max-width: $pointMobile) {
+            display: flex;
+            width: 100%;
+            -webkit-tap-highlight-color: transparent;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .app__sociallinks__item {
+            @media (max-width: $pointMobile) {
+                display: block;
+                flex-basis: 10vw;
+                height: 10vw;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

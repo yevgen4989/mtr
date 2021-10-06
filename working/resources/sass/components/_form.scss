@@ -1,0 +1,459 @@
+/*
+  Элементы пользовательского взаимодействия
+ */
+.form-inline {
+  display: block;
+
+  &.form-inline_mbottom {
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 67px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 4.8vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-bottom: 14.5vw;
+    }
+  }
+
+  .form-group {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.3vw;
+
+
+    /*
+    Всего 6 частей в инлайн форме 1 часть равна 15vw
+     */
+    &.form-group_part-1 {
+      @media (min-width: $pointLargeDesktop) {
+        width: 210px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 15vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+      }
+    }
+
+    &.form-group_part-3 {
+      @media (min-width: $pointLargeDesktop) {
+        width: 630px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 45vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+      }
+    }
+  }
+}
+
+.form-group {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  @media (min-width: $pointDesktop) {
+  }
+
+  @media (max-width: $pointMobile) {
+    margin-bottom: 3.4vw;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.form-group__mobile-margined {
+    @media (max-width: $pointMobile) {
+      margin-bottom: 3.4vw;
+    }
+  }
+
+  &.form-group__desktop-margined {
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 26px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 1.8vw;
+    }
+  }
+
+  &.has-error {
+      .form-control {
+          color: #e74c3c;
+          border: 1px solid #e74c3c;
+      }
+
+      .hint {
+          display: block;
+      }
+  }
+
+  .hint {
+      display: none;
+      color: #e74c3c;
+      font-size: 0.7vw;
+      position: absolute;
+
+      @media (min-width: $pointLargeDesktop) {
+          padding-top: 10px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+          padding-top: 0.7vw;
+      }
+
+      @media (max-width: $pointMobile) {
+          padding-top: 1vw;
+      }
+  }
+
+    &.form-group_short {
+    @media (min-width: $pointLargeDesktop) {
+      width: 616px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      width: 44vw;
+    }
+
+    @media (max-width: $pointMobile) {
+    }
+  }
+}
+
+.form-group__label {
+  display: block;
+  font-weight: $fontWeightLight;
+  position: relative;
+
+  @media (min-width: $pointLargeDesktop) {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    font-size: 1.3vw;
+    margin-bottom: 1.6vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    font-size: 3.2vw;
+    margin-bottom: 5.8vw;
+  }
+
+  &.form-group__label_small {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1vw;
+      margin-bottom: 1.6vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+      font-size: 3.2vw;
+      margin-bottom: 5.8vw;
+    }
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  @include placeholder-color(map_get($colorsMap, componentsFormControlPlaceholderColor));
+  background-color: map_get($colorsMap, componentsFormControlDefaultBackground);
+  box-sizing: border-box;
+  border-width: 0;
+  @include placeholder-color(#777777);
+  font-weight: $fontWeightLight;
+  font-family: 'GothamPro', sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none!important;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.form-group_bordered {
+    border: 1px solid map_get($colorsMap, componentsFromControlBorderColor);
+  }
+
+  &.form-group_white {
+    background-color: map_get($colorsMap, componentsFormControlWhiteBackground);
+  }
+
+  &.form-control_margin {
+    @media (min-width: $pointLargeDesktop) {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-bottom: 0.9vw;
+    }
+
+    @media (max-width: $pointMobile) {
+
+    }
+  }
+
+  &.form-control_margin-mobile {
+    @media (max-width: $pointMobile) {
+      margin-bottom: 4vw;
+    }
+  }
+
+  &.form-control_select {
+    background-image: url('/img/arrow_bottom.svg');
+    background-repeat: no-repeat;
+    
+    @media (min-width: $pointLargeDesktop) {
+      background-position: 96%, center;
+      background-size: 25px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      background-position: 96%, center;
+      background-size: 0.9vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      background-position: 96%, center;
+      background-size: 3.3vw;
+    }
+  }
+
+  &.form-control_large {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 72px;
+      font-weight: $fontWeightLight;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 5.1vw;
+      font-weight: $fontWeightLight;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 6.4vw;
+    }
+
+    @include placeholder-color(#e8e8e8);
+  }
+
+  &.form-control_clear {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &.form-control_small {
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 14px;
+      padding: 7px 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1vw;
+    }
+
+    @media (max-width: $pointMobile) {
+
+    }
+  }
+
+  &.form-control_textarea {
+    resize: none;
+
+    @media (min-width: $pointLargeDesktop) {
+      height: 83px;
+      border-radius: 26px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      height: 5.8vw;
+      border-radius: 1.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      
+    }
+  }
+
+  @media (min-width: $pointLargeDesktop) {
+    border-radius: 26px;
+    padding: 7px 19px 10px 19px;
+    font-size: 16px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    border-radius: 3vw;
+    padding: 0.5vw 1.4vw 0.7vw 1.4vw;
+    font-size: 1.1vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    border-radius: 6vw;
+    padding: 3.2vw 5.7vw;
+    font-size: 4vw;
+  }
+}
+
+
+.form-white {
+  display: block;
+  box-sizing: border-box;
+  background: #ffffff;
+
+  @media (min-width: $pointLargeDesktop) {
+    border-radius: 26px;
+    padding: 36.3px 36.3px 22.3px 36.3px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    border-radius: 2vw;
+    padding: 2.6vw 2.6vw 1.6vw 2.6vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    border-radius: 6vw;
+    padding: 6vw 8.4vw 4vw 8.4vw;
+  }
+
+  &.form-white_u-small {
+    @media (min-width: $pointLargeDesktop) {
+      border-radius: 26px;
+      padding: 27px 34px 27px 34px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      border-radius: 2vw;
+      padding: 1.6vw 2.6vw 1.6vw 2.6vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+      border-radius: 3.4vw;
+      padding: 6vw 8.4vw 6vw 8.4vw;
+    }
+  }
+
+  &.form-white_small {
+    @media (min-width: $pointLargeDesktop) {
+      border-radius: 26px;
+      padding: 29px 34px 27px 34px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      border-radius: 2vw;
+      padding: 2.2vw 2.6vw 1.6vw 2.6vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+      border-radius: 3.4vw;
+     padding: 6vw 8.4vw 6.8vw 8.4vw;
+    }
+  }
+
+  .form-control {
+    @media (min-width: $pointLargeDesktop) {
+      padding: 14px 19px 10px 19px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      padding: 1vw 2vw 0.9vw 2vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+      
+    }
+
+    &.form-control_textarea {
+      resize: none;
+  
+      @media (min-width: $pointLargeDesktop) {
+        height: 96px;
+        border-radius: 26px;
+      }
+  
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        height: 7.2vw;
+        border-radius: 1.5vw;
+      }
+  
+      @media (max-width: $pointMobile) {
+        height: 30vw;
+      }
+    }
+
+    &.form-control_margin-mobile {
+      @media (max-width: $pointMobile) {
+        margin-bottom: 2.4vw;
+      }
+    }
+  }
+
+  .form-group {
+    @media (max-width: $pointMobile) {
+      margin-bottom: 2.4vw;
+    }
+  }
+
+  .button_success {
+    @media (min-width: $pointLargeDesktop) {
+      margin-top: 8px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-top: 0.6vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-top: 2vw;
+    }
+  }
+}
+
+.form-white__wrapper {
+  @media (min-width: $pointDesktop) {
+    @include flex-container();
+  }
+
+  @media (max-width: $pointMobile) {
+   display: block;
+  }
+}
+
+.form-white__half {
+  @media (min-width: $pointDesktop) {
+    @include flex-item(50%);
+  }
+
+  @media (max-width: $pointMobile) {
+   display: block;
+  }
+}
+
+.form-white__full {
+  @media (min-width: $pointDesktop) {
+    @include flex-item(100%);
+  }
+
+  @media (max-width: $pointMobile) {
+   display: block;
+  }
+}

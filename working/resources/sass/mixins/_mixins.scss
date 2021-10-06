@@ -1,0 +1,93 @@
+@mixin font-face(
+  $name,
+  $file_name: null,
+  $style: 'normal',
+  $weight: 'normal',
+  $exts: eot ttf svg woff woff2 otf,
+  $path: '../fonts/'
+)
+{
+  $src: ();
+
+  $formats: (
+          'eot'  : 'embedded-opentype',
+          'woff2': 'woff2',
+          'woff' : 'woff',
+          'ttf'  : 'truetype',
+          'svg'  : 'svg',
+          'otf'  : 'opentype'
+  );
+
+  @if $file_name == null {
+    $file_name: $name;
+  }
+
+  @each $ext in $exts {
+    $uri: $path + $file_name + '.' + $ext;
+
+    @if not $src == null {
+      $src: $src + ', ';
+    }
+
+    $src:  append($src, url(quote($uri)) format(quote(map_get($formats, $ext))), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    src: $src;
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin placeholder-color($color: #000000) {
+  &::placeholder          {color: $color !important;}
+  &::-moz-placeholder     {color: $color !important;}
+  &:-moz-placeholder      {color: $color !important;}
+  &:-ms-input-placeholder {color: $color !important;}
+
+  &:focus::placeholder               {color: transparent;}
+  &:focus::-webkit-input-placeholder {color: transparent;}
+  &:focus::-moz-placeholder          {color: transparent;}
+  &:focus:-moz-placeholder           {color: transparent;}
+  &:focus:-ms-input-placeholder      {color: transparent;}
+}
+
+@mixin flex-container ($wrap: nowrap, $align: stretch, $justify: space-between) {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+  -webkit-justify-content: $justify;
+  justify-content: $justify;
+  -webkit-align-items: $align;
+  align-items: $align;
+}
+
+@mixin flex-item ($width: 100%) {
+  -webkit-flex-basis: $width;
+  flex-basis: $width;
+  position: relative;
+}
+
+
+@mixin input-clear () {
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  border: 0;
+
+  &:focus, &:active, &:hover {
+    outline: none;
+    outline-offset: 0;
+  }
+}
+
+@mixin transition ($element: all, $duration: 1s, $function: ease, $delay: 0.5s) {
+  -webkit-transition: $element $duration $function $delay;
+  -moz-transition: $element $duration $function $delay;
+  -o-transition: $element $duration $function $delay;
+  transition: $element $duration $function $delay;
+}

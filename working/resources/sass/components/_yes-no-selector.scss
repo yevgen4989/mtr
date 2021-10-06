@@ -1,0 +1,64 @@
+.yes-no-selector {
+  display: block;
+
+  .yes-no-selector__choice-param {
+    display: inline-block;
+    vertical-align: middle;
+
+    input {
+      display: none;
+    }
+
+    input + span {
+      display: block;
+      color: #b7b7b7;
+      cursor: pointer;
+      @include transition(color, 0.5s, ease, 0.1s);
+
+      &:hover {
+        color: #000000;
+      }
+    }
+
+    input:checked + span {
+      color: #000000;
+    }
+    
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 80px;
+      margin-right: 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 5.7vw;
+      margin-right: 1.5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 13.3vw;
+      margin-right: 3.4vw;
+    }
+  }
+
+  .yes-no-selector__image {
+
+    @media (min-width: $pointLargeDesktop) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 336px;
+      margin-left: 60px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 24vw;
+      margin-left: 2.3vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      display: block;
+      width: 100%;
+    }
+  }
+}

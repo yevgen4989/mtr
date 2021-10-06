@@ -1,0 +1,251 @@
+.button {
+  display: inline-block;
+  font-weight: $fontWeightLight;
+  text-align: center;
+  background-color: map_get($colorsMap, componentsButtonDefaultBackground);
+  text-decoration: none;
+  color: map_get($colorsMap, commonBodyTextColor);
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+  @include transition(background-color, 0.5s, ease, 0s);
+
+  span {
+    display: inline-block;
+    box-sizing: border-box;
+
+    @media (min-width: $pointLargeDesktop) {
+      padding-top: 2.8px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      padding-top: 0.2vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      vertical-align: middle;
+    }
+  }
+
+  &:hover {
+    background-color: map_get($colorsMap, componentsButtonDefaultHoverColor);
+  }
+
+  &.button_white {
+    background-color: #ffffff;
+  }
+
+  &.button_bordered {
+    border: 1px solid #000000;
+  }
+
+  &.button_big {
+    font-weight: $fontWeightUltraBold;
+    width: 100%;
+    text-align: center;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 18px;
+      padding: 14px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.3vw;
+      padding: 1vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      font-size: 4.8vw;
+      padding: 3.4vw;
+    }
+  }
+
+  &.button_big-inline {
+    font-weight: $fontWeightUltraBold;
+    text-align: center;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 18px;
+      padding: 14px 80px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.3vw;
+      padding: 1vw 5vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      width: 100%;
+      font-size: 4.8vw;
+      padding: 3.4vw;
+    }
+  }
+
+  &.button_big-like-form-control {
+    font-weight: $fontWeightUltraBold;
+    text-align: center;
+
+    @media (min-width: $pointLargeDesktop) {
+      border-radius: 26px;
+      padding: 9px 56px 8px 56px;
+      font-size: 16px;
+    }
+    
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      border-radius: 3vw;
+      padding: 0.6vw 4vw 0.6vw 4vw;
+      font-size: 1.1vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      width: 100%;
+      border-radius: 6vw;
+      padding: 3.2vw 5.7vw;
+      font-size: 4vw;
+    }
+  }
+
+  &.button_as-input {
+    font-weight: $fontWeightUltraBold;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 15px;
+      padding: 11px 20px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1.1vw;
+      padding: 0.85vw 1.4vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      padding: 4vw 5.7vw;
+      font-size: 4vw;
+    }
+  }
+
+  &.button_success {
+    background-color: map_get($colorsMap, componentsButtonSuccessBackground);
+    color: map_get($colorsMap, componentsButtonSuccessTextColor);
+
+    &:hover {
+      background-color: map-get($colorsMap, componentsButtonSuccessHoverBackground);
+    }
+  }
+
+  &.button_margin {
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-right: 7px;
+      margin-bottom: 13px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax)  {
+      margin-right: 0.4vw;
+      margin-bottom: 1.1vw;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-right: 2.8vw;
+      margin-bottom: 3.7vw;
+    }
+  }
+
+  &.button_mright {
+
+    @media (min-width: $pointLargeDesktop) {
+      margin-right: 21px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      margin-right: 1.4vw;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: $pointMobile) {
+      margin-right: 1vw;
+    }
+  }
+
+  &.button_small-scale {
+    box-sizing: border-box;
+
+    @media (min-width: $pointLargeDesktop) {
+      font-size: 14px;
+      padding: 9px 21px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      font-size: 1vw;
+      padding: 0.5vw 1.4vw 0.7vw 1.4vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      padding: 2vw 5.5vw;
+      font-size: 3vw;
+    }
+  }
+
+  &.button_active {
+    background-color: map_get($colorsMap, componentsButtonActiveBackground);
+    font-weight: $fontWeightSemiBold;
+    color: map_get($colorsMap, componentsButtonActiveColor);
+  }
+
+  @media (min-width: $pointLargeDesktop) {
+    border-radius: 28px;
+    padding: 5px 22px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    border-radius: 2vw;
+    padding: 0.43vw 1.7vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    border-radius: 10vw;
+    padding: 1.4vw 5vw;
+    margin-bottom: 2vw;
+  }
+
+  .button__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    @media (min-width: $pointLargeDesktop) {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      width: 1.6vw;
+      height: 1.6vw;
+      margin-right: 0.4vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      width: 5.8vw;
+      height: 5.8vw;
+      margin-right: 1vw;
+    }
+  }
+}

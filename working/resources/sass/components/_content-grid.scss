@@ -1,0 +1,138 @@
+.content-grid {
+  @media (min-width: $pointLargeDesktop) {
+    @include flex-container(wrap, stretch, space-between);
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    @include flex-container(wrap, stretch, space-between);
+    margin-bottom: 1.5vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    display: block;
+    margin-bottom: 2.9vw;
+  }
+
+  &.content-grid_element-from-start {
+    @media (min-width: $pointDesktop) {
+      @include flex-container(wrap, flex-start, space-between);
+    }
+
+    @media (max-width: $pointMobile) {
+
+    }
+  }
+
+  &.content-grid_nmargin {
+    margin: 0;
+  }
+
+  &.content-grid_nmargin-mobile {
+    margin: 0;
+  }
+
+  .content-grid__item {
+    background-color: map_get($colorsMap, componentsContentGrindItemBackgreound);
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    @include transition(all, 0.8s, ease, 0.1s);
+
+    &.content-grid__item_show {
+      opacity: 1;
+      top: 0;
+    }
+
+    @media (min-width: $pointLargeDesktop) {
+      border-radius: 25px;
+      padding: 31px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      border-radius: 2vw;
+      padding: 2.4vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      border-radius: 6vw;
+      padding: 6vw 4.5vw 8vw 4.5vw;
+    }
+
+    &.content-grid__item_no-background {
+      background-color: transparent;
+    }
+
+    &.content-grid__item_clear {
+      padding: 0;
+    }
+
+
+    &.content-grid__item_full {
+      @media (min-width: $pointDesktop) {
+        @include flex-item(100%);
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+      }
+    }
+
+    &.content-grid__item_twice {
+      @media (min-width: $pointLargeDesktop) {
+        @include flex-item(903px);
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        @include flex-item(69.4%);
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+        margin-bottom: 2.9vw;
+      }
+    }
+
+    &.content-grid__item__full-height {
+      @media (min-width: $pointLargeDesktop) {
+        min-height: 546px;
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        min-height: 39vw;
+      }
+
+      @media (max-width: $pointMobile) {
+        min-height: 70vh;
+      }
+    }
+
+    &.content-grid__item__once {
+      @media (min-width: $pointLargeDesktop) {
+        @include flex-item(378px);
+      }
+
+      @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        @include flex-item(29%);
+      }
+
+      @media (max-width: $pointMobile) {
+        display: block;
+        margin-bottom: 2.9vw;
+      }
+    }
+
+    &.content-grid__item_nmargin {
+      margin: 0;
+    }
+
+    &.content-grid__item_nmargin_mobile {
+      @media (max-width: $pointMobile) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

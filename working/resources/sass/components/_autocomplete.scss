@@ -1,0 +1,50 @@
+.autocomplete-suggestions {
+  background: #ffffff;
+  z-index: 4;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+  overflow-y: auto;
+
+  @media (min-width: $pointLargeDesktop) {
+    padding: 21px;
+    box-shadow: 8px 8px 7px rgba(0,0,0,0.4);
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    padding: 1.5vw;
+    box-shadow: 0.6vw 0.6vw 0.5vw rgba(0,0,0,0.4);
+  }
+
+  @media (max-width: $pointMobile) {
+    padding: 2.9vw;
+    box-shadow: 1vw 1vw 0.9vw rgba(0,0,0,0.4);
+  }
+
+  .autocomplete-suggestion {
+    display: block;
+    border-bottom: 1px solid #dddddd;
+    background: #ffffff;
+    @include transition(background, 1s, ease, 0s);
+
+    &:last-child {
+      border: none;
+    }
+
+    @media (min-width: $pointLargeDesktop) {
+      padding: 13px 8px;
+    }
+
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+      padding: 1.1vw 0.8vw;
+    }
+
+    @media (max-width: $pointMobile) {
+      padding: 3.7vw 1.4vw;
+    }
+
+    &.autocomplete-selected {
+      background: #dddddd;
+    }
+  }
+}

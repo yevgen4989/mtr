@@ -1,0 +1,32 @@
+.info {
+  display: block;
+  position: absolute;
+  right: 0;
+  color: #b2b2b2;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #b2b2b2;
+  font-weight: $fontWeightNormal;
+  line-height: 1.4;
+
+  @media (min-width: $pointLargeDesktop) {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+    width: 1.8vw;
+    height: 1.8vw;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+  }
+
+  @media (max-width: $pointMobile) {
+    width: 6.4vw;
+    height: 6.4vw;
+    border-radius: 8vw;
+    font-size: 4.4vw;
+  }
+}

@@ -1,0 +1,28 @@
+/*
+    Компонент free-window нужен для того, чтобы отобразить различные элементы ввода 
+    непосредственно рядом с элементами, которые в контексте их вызывают. В данном компоненте могут
+    быть размещены любые элементы сайта. Размеры данного окна фиксированы.
+*/
+.free-window {
+    display: none;
+    position: absolute;
+    overflow-x: hidden;
+
+    &.free-window_size-default {
+        @media (min-width: $pointLargeDesktop) {
+            width: 336px;
+        }
+  
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+            width: 24vw;
+        }
+  
+        @media (max-width: $pointMobile) {
+            width: 83vw;
+        }
+    }
+
+    &.free-window_show {
+        display: block;
+    }
+}

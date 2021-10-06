@@ -1,0 +1,346 @@
+.tracking__wrapper {
+    display: block;
+    min-width: 100%;
+
+    @media (min-width: $pointLargeDesktop) {
+        @include flex-item(100%);
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        width: 100%;
+    }
+  
+    @media (max-width: $pointMobile) {
+        width: 100%;
+    }
+}
+
+.tracking__title {
+    display: block;
+
+    @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 53px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 3.8vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+        margin-bottom: 9.7vw;
+    }
+}
+
+
+.tracking__subtitle {
+    display: block;
+    color: map-get($colorsMap, trackingSubtitleColor);
+    font-weight: $fontWeightLight;
+
+    @media (min-width: $pointLargeDesktop) {
+        font-size: 18px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        font-size: 1.3vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+        margin-top: 8.1vw;
+    }
+}
+
+.tracking__list {
+    display: block;
+    padding: 0;
+    font-size: 0;
+
+    @media (min-width: $pointLargeDesktop) {
+        margin-bottom: 36px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        margin-bottom: 2.6vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+        margin-bottom: 8.6vw;
+    }
+}
+
+.tracking__item {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    margin-top: -1px;
+    
+    @media (min-width: $pointLargeDesktop) {
+        
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+
+    }
+  
+    @media (max-width: $pointMobile) {
+        
+    }
+
+    &:first-child {
+        .tracking__item__history {
+            &:before {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                z-index: 2;
+    
+                @media (min-width: $pointLargeDesktop) {
+                    left: 0;
+                    width: 33px;
+                    height: 33px;
+                }
+              
+                @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                    left: 0;
+                    width: 2.4vw;
+                    height: 2.4vw;
+                }
+              
+                @media (max-width: $pointMobile) {
+                    left: 0;
+                    width: 8vw;
+                    height: 8vw;
+                }    
+            }
+        }
+
+
+        .tracking__item__description {
+            @media (min-width: $pointLargeDesktop) {
+
+            }
+          
+            @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                padding: 0.6vw 0.8vw 0.8vw 0.8vw;
+            }
+          
+            @media (max-width: $pointMobile) {
+                padding: 2.6vw 4.2vw 4.2vw 4.2vw;
+            }
+
+            .tracking__item__description__date {
+                @media (min-width: $pointLargeDesktop) {
+                    
+                }
+              
+                @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                    
+                }
+              
+                @media (max-width: $pointMobile) {
+                    
+                }
+            }
+    
+            .tracking__item__description__status {
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                
+                @media (min-width: $pointLargeDesktop) {
+                    font-size: 25px;
+                }
+              
+                @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                    font-size: 1.8vw;
+                }
+              
+                @media (max-width: $pointMobile) {
+                    font-size: 5.3vw;
+                }
+            }
+        }
+
+    }
+
+    &:last-child {
+        .tracking__item__history {
+            &:after {
+                content: " ";
+                display: none;
+            }
+        }
+    }
+
+    .tracking__item__history {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+
+        @media (min-width: $pointLargeDesktop) {
+            width: 33px;
+            height: 127px;
+        }
+      
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+            width: 2.4vw;
+            min-height: 9.1vw;
+        }
+      
+        @media (max-width: $pointMobile) {
+            width: 8vw;
+            min-height: 32.8vw;
+        }
+
+
+        &:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-style: solid;
+            border-color: #d1d1d1;
+
+            @media (min-width: $pointLargeDesktop) {
+                left: 5px;
+                width: 22px;
+                height: 22px;
+                border-width: 4px;
+                border-radius: 40px;
+            }
+          
+            @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                left: 0.44vw;
+                width: 1.5vw;
+                height: 1.5vw;
+                border-width: 0.3vw;
+                border-radius: 6vw;
+            }
+          
+            @media (max-width: $pointMobile) {
+                left: 1.27vw;
+                width: 5.3vw;
+                height: 5.3vw;
+                border-width: 1vw;
+                border-radius: 20vw;
+            }    
+        }
+
+        &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            background-color: #e8e8e8;
+            top: 0;
+            height: 100%;
+            z-index: 1;
+
+
+            @media (min-width: $pointLargeDesktop) {
+                width: 10px;
+                left: 11px;
+            }
+          
+            @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                width: 0.6vw;
+                left: 0.9vw;
+            }
+          
+            @media (max-width: $pointMobile) {
+                width: 2.4vw;
+                left: 2.8vw;
+            }    
+        }
+    }
+
+    .tracking__item__description {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+
+        @media (min-width: $pointLargeDesktop) {
+            width: 1489px;
+            height: 127px;
+            padding: 4px 14px 14px 14px;
+        }
+      
+        @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+            width: 57.2vw;
+            height: 9.1vw;
+            padding: 0.3vw 0.8vw 0.8vw 0.8vw;
+        }
+      
+        @media (max-width: $pointMobile) {
+            width: 76.6vw;
+            height: 32.8vw;
+            padding: 1.2vw 4.2vw 4.2vw 4.2vw;
+        }
+
+        .tracking__item__description__date {
+            display: block;
+            font-weight: $fontWeightLight;
+
+            @media (min-width: $pointLargeDesktop) {
+                font-size: 18px;
+                margin-bottom: 14px;
+            }
+          
+            @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                font-size: 1.3vw;
+                margin-bottom: 1vw;
+            }
+          
+            @media (max-width: $pointMobile) {
+                font-size: 4vw;
+                margin-bottom: 4vw;
+            }
+        }
+
+        .tracking__item__description__status {
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-weight: $fontWeightBold;
+            
+            @media (min-width: $pointLargeDesktop) {
+                font-size: 18px;
+            }
+          
+            @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+                font-size: 1.3vw;
+                
+            }
+          
+            @media (max-width: $pointMobile) {
+                font-size: 4vw;
+            }
+        }
+    }
+}
+
+
+.tracking__note {
+    display: block;
+    color: map-get($colorsMap, trackingNoteColor);
+    margin-bottom: 0;
+    line-height: 1.2;
+
+    @media (min-width: $pointLargeDesktop) {
+        font-size: 12px;
+    }
+  
+    @media (min-width: $pointDesktop) and (max-width: $pointDesktopMax) {
+        font-size: 0.9vw;
+    }
+  
+    @media (max-width: $pointMobile) {
+        
+    }
+}
