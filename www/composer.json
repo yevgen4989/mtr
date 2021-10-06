@@ -1,0 +1,15 @@
+{
+  "name": "mtr/www",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "eugene_pisotsky",
+      "email": "yevgenpisotsky@outlook.com"
+    }
+  ],
+  "require": {
+    "wapmorgan/morphos": "^3.2"
+  }
+}

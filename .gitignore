@@ -1,6 +1,7 @@
 *.sql
 *.csv
 *.zip
+*.log
 *.sqllite
 /boilerplate/data/
 /boilerplate/logs/
@@ -9,9 +10,15 @@
 /transfer_backup
 .idea
 /www/*
+!/www/wp-config.php
+!/www/composer.json
 !/www/wp-content/
-/www/wp-content/*
+/www/wp-content/cache
+/www/wp-content/languages
 !/www/wp-content/themes/
+!/www/wp-content/plugins/
+!/www/wp-content/w3tc-config/
+!/www/wp-content/webp-express/config/
 /www/wp-content/uploads/*
 /www/wp-content/upgrade/*
 /www/wp-content/updraft/*
